@@ -244,7 +244,7 @@ app.delete("/delete/:id", async (req, res) => {
     }
 });
 
-
-app.listen(3080, () => {
-    console.log("Listening in Port 3080");
+const port = process.env.PORT || 3080
+app.listen(port, () => {
+    console.log("Listening in Port: ",port);
 });
