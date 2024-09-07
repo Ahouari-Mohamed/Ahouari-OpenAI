@@ -25,7 +25,7 @@ export default function ChatMenu({ chatAdded, setChatAdded, fetchChat}) {
 
     async function handleDelete(chatId) {
         try {
-            const response = await fetch(`http://localhost:3080/delete/${chatId}`, {
+            const response = await fetch(`https://ahouari-openai.onrender.com/delete/${chatId}`, {
                 method: 'DELETE'
             });
     
@@ -43,7 +43,7 @@ export default function ChatMenu({ chatAdded, setChatAdded, fetchChat}) {
     
     async function handleRename(chatId) {
         try {
-            const response = await fetch(`http://localhost:3080/rename/${chatId}`, {
+            const response = await fetch(`https://ahouari-openai.onrender.com/rename/${chatId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ export default function ChatMenu({ chatAdded, setChatAdded, fetchChat}) {
     useEffect(() => {
         const fetchUserChats = async () => {
             try {
-                const response = await fetch(`http://localhost:3080/userChats`);
+                const response = await fetch(`https://ahouari-openai.onrender.com/userChats`);
 
                 console.log('Status Code:', response.status);
                 if (!response.ok) {
