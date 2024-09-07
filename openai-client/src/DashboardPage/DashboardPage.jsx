@@ -79,7 +79,7 @@ function DashboardPage() {
     const fetchChatIndex = async () => {
       try {
         const userId = 1;
-        const response = await fetch(`http://localhost:3080/chatIndex/${userId}`);
+        const response = await fetch(`https://ahouari-openai.onrender.com/chatIndex/${userId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -104,7 +104,7 @@ function DashboardPage() {
   // adjust the chat log with the selected chat
   async function fetchChat(chatId) {
     try {
-      const response = await fetch(`http://localhost:3080/userChats/${chatId}`);
+      const response = await fetch(`https://ahouari-openai.onrender.com/userChats/${chatId}`);
       if (!response.ok) {
         throw new Error('Chat not found');
       }
@@ -132,7 +132,7 @@ function DashboardPage() {
       if (!Array.isArray(updatedChatLog)) {
         console.error('History is not an array:', updatedChatLog);
       }
-      const response = await fetch("http://localhost:3080/generate", {
+      const response = await fetch("https://ahouari-openai.onrender.com/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -180,7 +180,7 @@ function DashboardPage() {
         history: chatLogRef.current
       }));
 
-      await fetch("http://localhost:3080/chatLog", {
+      await fetch("https://ahouari-openai.onrender.com/chatLog", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
