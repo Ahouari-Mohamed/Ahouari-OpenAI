@@ -10,7 +10,8 @@
     align-items: center;
     gap: 100px;
     height: 100svh;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: #171717;
     color: white;
     position: relative;
