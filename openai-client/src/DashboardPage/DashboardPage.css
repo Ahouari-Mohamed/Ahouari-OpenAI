@@ -12,6 +12,7 @@ body {
 
 .Dashboard {
   display: flex;
+  position: relative;
 }
 
 .side{
