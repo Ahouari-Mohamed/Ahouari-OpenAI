@@ -214,7 +214,7 @@ hr {
 
 .chat-input {
   width: 70%;
-  height: 45px;
+  min-height: 45px;
   max-height: 150px;
   margin: 1.3em;
   background-color: #2f2f2f;
@@ -373,6 +373,9 @@ li {
 }
 
 @media (max-width: 640px) {
+  .chat-input {
+    font-size: 1.05em;
+  }
   .submit-search{
     right: 15.7%;
   }
