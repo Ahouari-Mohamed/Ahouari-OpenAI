@@ -9,9 +9,11 @@
     display: flex;
     align-items: center;
     gap: 100px;
-    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
     background-color: #171717;
     color: white;
+    position: relative;
 
     .left{
         width: 50%;
@@ -192,13 +194,8 @@
 
 @media (max-width: 1024px) {
     .Homepage {
-        all: unset;
-        display: flex;
         flex-direction: column;
-        gap: 30px;
-        height: 100vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        gap: 10.5vh;
         background-color: #171717;
         color: white;
 
