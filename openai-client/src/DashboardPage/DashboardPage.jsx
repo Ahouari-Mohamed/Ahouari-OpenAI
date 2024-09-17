@@ -379,7 +379,7 @@ function DashboardPage() {
         <form className="chat-input-block" onSubmit={handleSubmit}>
           <textarea
             type="text"
-            placeholder="Type To Search..."
+            placeholder="Type..."
             className="chat-input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
